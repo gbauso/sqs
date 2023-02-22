@@ -1,0 +1,17 @@
+{
+  "profiles": {
+    "Mock Lambda Test Tool": {
+      "commandName": "Executable",
+      "commandLineArgs": "--port 5050",
+      "executablePath": "%USERPROFILE%\\.dotnet\\tools\\dotnet-lambda-test-tool-6.0.exe",
+      "environmentVariables": {
+        "Application__Version": "1.0.0",
+        "ENVIRONMENT": "dev",
+        "LAMBDA_NET_SERIALIZER_DEBUG": "true",
+        "AWS_LAMBDA_FUNCTION_NAME": "SqsApplication",
+        "AWS_LAMBDA_FUNCTION_VERSION": "1"
+      },
+      "workingDirectory": ".\\bin\\$(Configuration)\\net6.0"
+    }
+  }
+}

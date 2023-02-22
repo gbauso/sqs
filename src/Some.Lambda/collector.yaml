@@ -1,0 +1,17 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: localhost:4317
+
+exporters:
+  otlp:
+    endpoint: otlp.nr-data.net:4317
+    headers:
+      api-key: ${NewRelic__ApiKey}
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      exporters: [otlp]

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Some.Lambda</id>
+    <version>$version$</version>
+    <authors>ParkNow</authors>
+    <description>Some.Lambda Lambda Deployment Package</description>
+    <language>en-US</language>
+  </metadata>
+  <files>
+    <file src="template.yaml" target="template.yaml" />
+    <file src="metadata.yaml" target="metadata.yaml" />
+    <file src="build\**" target="build" exclude="obj\**\*.*"/>
+    <file src="build.ps1" target="build.ps1" />
+    <file src="deploy\DeploymentScript.ps1" target="DeploymentScript.ps1" />
+    <file src="src\Some.Lambda\configs\**" target="artifacts\configs"/> 
+	  <file src="publish\integrations\**" target="publish\integrations"/>
+    <file src="artifacts/**" target="" />
+  </files>
+</package>

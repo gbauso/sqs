@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Some.Lambda.Integrations": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "Application__AppEnvironment": "test"
+      }
+    }
+  }
+}

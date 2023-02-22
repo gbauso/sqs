@@ -1,0 +1,13 @@
+Version: "1.0"
+Description: >
+  Lambda
+Platform: bloxx
+System: Some
+Subsystem: Lambda
+Owner: bloxx
+Runtimes:
+  - dotnet6.0
+JiraReference: 
+ApplicationTypes:
+  - Lambda
+CustomerFacing: false

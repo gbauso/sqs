@@ -1,0 +1,51 @@
+﻿{
+  "ApplicationName": "SqsApplication",
+  "ApplicationPlatform": "bloxx",
+  "ApplicationSystem": "Some",
+  "ApplicationSubsystem": "Lambda",
+  "ApplicationOwner": "bloxx",
+  "ToolsFolder": "caketools",
+  "ArtifactsFolder": "artifacts",
+  "CoverageResult": "./dotcover/coverageResult.dcvr",
+  "CoverageReport": "./dotcover/coverageReport.html",
+  "PublishFolder": "publish",
+  "SolutionFile": "Some.Lambda.sln",
+  "TestProjectPattern": "Tests",
+  "PackagingNuspec": [
+    "../Some.Lambda.nuspec"
+  ],
+  "PublishProjects": [
+    {
+      "ZipOutput": true,
+      "ProjectFile": "src/Some.Lambda/Some.Lambda.csproj",
+      "ZipFileName": "Some.Lambda.zip",
+      "SettingsZipFileName": "Some.Lambda_jsonSettings.zip",
+      "SettingsFolder": "src/Some.Lambda/config"
+    },
+      {
+        "ProjectFile": "test/Some.Lambda.Integrations/Some.Lambda.Integrations.csproj",
+        "ProjectOutput": "integrations"
+      }
+  ],
+  "DotCoverFilters": [ "-:Tests", "-:build" ],
+  "SonarQubeProjectKey": "NLMICROSERVICES_sqs",
+  "BitBucketProjectKey": "NLMICROSERVICES",
+  "BitBucketRepoSlug": "sqs",
+  "SonarQube.ProjectName": "Some.Lambda",
+  "AwsCodeArtifactsRepo": "bloxx",
+  "AwsCodeArtifactsDomainOwner": "380786374138",
+  "AwsCodeArtifactsDomain": "prod-automation-codeartifact",
+  "AwsRegion": "eu-central-1",
+  "EcrRoot": "380786374138.dkr.ecr.eu-central-1.amazonaws.com",
+  "ReleasableBranches": [ "main", "development", "hotfix", "release" ],
+  "BranchEnvironmentMap": {
+    "main": "prod",
+    "development": "test",
+    "hotfix": "sit",
+    "release": "sit"
+  },
+  "IntegrationTestsDll": "publish/integrations/Some.Lambda.Integrations.dll",
+  "TestrailProjectId": 43,
+  "TestrailSectionId": 25333,
+  "TestrailBaseUrl": "https://parkmobile.testrail.net/"
+}
